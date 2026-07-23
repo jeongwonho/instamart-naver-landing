@@ -1,0 +1,52 @@
+{
+  "private": true,
+  "name": "autobrand-connect",
+  "description": "AutoBrand Connect - 네이버 브랜드커넥트 자동화 솔루션",
+  "version": "1.0.15",
+  "main": "app/background.js",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "typecheck": "tsc --noEmit",
+    "tistory:login": "node automation/tistory/cli.mjs login",
+    "tistory:plan": "node automation/tistory/cli.mjs plan",
+    "tistory:dry-run": "node automation/tistory/cli.mjs dry-run",
+    "tistory:publish": "node automation/tistory/cli.mjs publish",
+    "tistory:daily": "node automation/tistory/cli.mjs daily",
+    "test:tistory": "node --test automation/tistory/__tests__/*.test.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@google/genai": "^1.47.0",
+    "@supabase/supabase-js": "^2.103.0",
+    "@tailwindcss/typography": "^0.5.19",
+    "axios": "^1.14.0",
+    "cheerio": "^1.2.0",
+    "electron-serve": "^1.3.0",
+    "electron-store": "^8.2.0",
+    "electron-updater": "^6.8.3",
+    "lucide-react": "^1.23.0",
+    "next": "^16.2.10",
+    "openai": "^6.41.0",
+    "playwright": "^1.58.2",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "sharp": "^0.34.5",
+    "zustand": "^5.0.12"
+  },
+  "optionalDependencies": {
+    "@img/sharp-libvips-win32-x64": "^1.2.4",
+    "@img/sharp-win32-x64": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^6.0.3"
+  }
+}

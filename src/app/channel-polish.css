@@ -1,0 +1,374 @@
+.channelPage {
+  word-break: keep-all;
+}
+
+.channelBusinessFooter {
+  border-top: 1px solid #e7e9ee;
+  padding: 34px 0 40px;
+  color: #616672;
+  background: #f7f8fa;
+}
+
+.channelBusinessFooterInner {
+  display: grid;
+  gap: 17px;
+}
+
+.channelBusinessHeading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.channelBusinessHeading strong {
+  color: #17191f;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.channelBusinessHeading span,
+.channelBusinessInfo,
+.channelPolicyLinks,
+.channelCouponNotice {
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.channelBusinessInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px 16px;
+}
+
+.channelBusinessInfo a,
+.channelPolicyLinks a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.channelBusinessInfo a:hover,
+.channelPolicyLinks a:hover {
+  color: #17191f;
+}
+
+.channelPolicyLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-weight: 800;
+}
+
+.channelPolicyLinks a:first-child,
+.channelPolicyLinks a:nth-child(2) {
+  color: #2b2e36;
+}
+
+.channelCouponNotice {
+  margin: 0;
+  color: #7a7f8b;
+}
+
+@media (max-width: 767px) {
+  .channelPage {
+    padding-bottom: 74px;
+    background: #ffffff;
+  }
+
+  .channelContainer {
+    width: min(100% - 32px, 430px);
+  }
+
+  .channelTopBanner {
+    min-height: 36px;
+    flex-wrap: nowrap;
+    gap: 7px;
+    padding: 7px 12px;
+    font-size: 12px;
+    font-weight: 850;
+    line-height: 1.2;
+  }
+
+  .channelTopBanner span {
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .channelTopBanner strong {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    border-radius: 999px;
+    padding: 0 8px;
+    color: var(--channel-yellow);
+    background: rgba(255, 208, 0, 0.14);
+  }
+
+  .channelTopBanner a {
+    min-height: auto;
+    margin-left: 0;
+    border-left: 0;
+    padding-left: 2px;
+  }
+
+  .channelHeader {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(18px);
+  }
+
+  .channelHeaderInner {
+    min-height: 64px;
+  }
+
+  .channelBrand {
+    width: 138px;
+  }
+
+  .channelHeaderCta {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    border-radius: 12px;
+    box-shadow: 0 10px 22px rgba(255, 208, 0, 0.18);
+  }
+
+  .channelHero {
+    padding: 34px 0 30px;
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 72%, #f8f9fb 100%);
+  }
+
+  .channelHeroCenter {
+    min-height: auto;
+    gap: 17px;
+    padding: 38px 0 28px;
+  }
+
+  .channelKicker {
+    padding: 7px 13px;
+    border-color: rgba(243, 189, 0, 0.54);
+    color: #292600;
+    background: #fffcef;
+    font-size: 12px;
+    font-weight: 850;
+  }
+
+  .channelHero h1 {
+    max-width: 340px;
+    font-size: clamp(33px, 9.3vw, 40px);
+    font-weight: 900;
+    line-height: 1.12;
+  }
+
+  .channelHero h1 mark {
+    display: inline-block;
+    margin-top: 2px;
+  }
+
+  .channelHeroLead {
+    max-width: 318px;
+    color: #383d48;
+    font-size: 15px;
+    line-height: 1.72;
+  }
+
+  .channelQuantityPicker {
+    width: min(100%, 328px);
+    gap: 9px;
+    margin-top: 1px;
+  }
+
+  .channelQuantityPicker a {
+    min-height: 54px;
+    border-color: #e9ebef;
+    border-radius: 12px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 28px rgba(17, 19, 24, 0.045);
+  }
+
+  .channelQuantityPicker a:first-child {
+    border-color: rgba(243, 189, 0, 0.68);
+    background: #fffdf1;
+  }
+
+  .channelQuantityPicker strong {
+    font-size: 14px;
+    font-weight: 900;
+  }
+
+  .channelQuantityPicker span {
+    color: #747986;
+    font-size: 11px;
+    font-weight: 750;
+  }
+
+  .channelHeroActions {
+    width: min(100%, 328px);
+    grid-template-columns: 1fr;
+    justify-content: stretch;
+    margin-top: 0;
+    justify-items: stretch;
+  }
+
+  .channelHeroCenter .channelHeroActions .channelPrimaryCta {
+    width: 100%;
+    inline-size: 100%;
+    justify-self: stretch;
+    min-width: 0;
+    min-inline-size: 0;
+    min-height: 54px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+    box-shadow: 0 16px 30px rgba(255, 208, 0, 0.28);
+  }
+
+  .channelTrustBand {
+    width: min(100% - 32px, 430px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 18px;
+    overflow: visible;
+    border-radius: 0;
+    color: #15171d;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .channelTrustBand article,
+  .channelTrustBand article:nth-child(2),
+  .channelTrustBand article:nth-child(2n),
+  .channelTrustBand article:nth-child(-n + 2),
+  .channelTrustBand article:not(:last-child) {
+    grid-template-columns: 1fr;
+    min-height: 116px;
+    gap: 9px;
+    align-content: start;
+    border: 1px solid #eaedf2;
+    border-radius: 12px;
+    padding: 16px 14px;
+    background: #ffffff;
+    box-shadow: 0 12px 28px rgba(17, 19, 24, 0.05);
+  }
+
+  .channelTrustBand svg {
+    width: 24px;
+    height: 24px;
+    color: var(--channel-yellow-2);
+  }
+
+  .channelTrustBand strong {
+    color: #15171d;
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  .channelTrustBand span {
+    color: #20242d;
+    font-size: 13px;
+  }
+
+  .channelTrustBand p {
+    color: #737987;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  .channelFitSection,
+  .channelPricing {
+    background: #f7f8fb;
+  }
+
+  .channelFitSection,
+  .channelPricing,
+  .channelProcess,
+  .channelCases,
+  .channelFaq {
+    padding: 56px 0;
+  }
+
+  .channelSectionTitle.center {
+    margin-bottom: 24px;
+  }
+
+  .channelSectionTitle p {
+    font-size: 13px;
+  }
+
+  .channelSectionTitle h2 {
+    font-size: 24px;
+    line-height: 1.38;
+  }
+
+  .channelFitGrid article,
+  .channelCaseGrid article,
+  .channelPricingGrid article,
+  .channelFaqList details {
+    border-color: #eaedf2;
+    border-radius: 12px;
+    box-shadow: 0 10px 24px rgba(17, 19, 24, 0.035);
+  }
+
+  .channelMobileStickyCta {
+    padding: 10px 16px 11px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 -16px 34px rgba(17, 19, 24, 0.12);
+    backdrop-filter: blur(18px);
+  }
+
+  .channelMobileStickyButton {
+    max-width: 430px;
+    min-height: 52px;
+    margin: 0 auto;
+    border-radius: 12px;
+    font-size: 15px;
+    box-shadow: 0 12px 26px rgba(255, 208, 0, 0.28);
+  }
+
+  .channelBusinessFooter {
+    padding: 28px 0 32px;
+  }
+
+  .channelBusinessHeading {
+    display: grid;
+    gap: 2px;
+  }
+
+  .channelBusinessInfo {
+    display: grid;
+    gap: 2px;
+  }
+
+  .channelPolicyLinks {
+    gap: 6px 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  .channelTopBanner {
+    gap: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 11px;
+  }
+
+  .channelBrand {
+    width: 130px;
+  }
+
+  .channelHero h1 {
+    font-size: 32px;
+  }
+
+  .channelQuantityPicker {
+    width: min(100%, 318px);
+    gap: 8px;
+  }
+
+  .channelQuantityPicker a {
+    padding-right: 9px;
+    padding-left: 9px;
+  }
+
+  .channelMobileStickyButton {
+    font-size: 14px;
+  }
+}
