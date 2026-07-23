@@ -80,6 +80,20 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 };
 
+// 영업시간 외 자동 리디렉션 (KST 기준)
+// - 평일 22:05 ~ 05:55, 주말(토·일) 종일 → 판매몰로 이동
+// - 광고 랜딩 경로("/", "/likes")에만 적용 (블로그 등 SEO 페이지 제외)
+// - <head> 인라인 동기 실행이라 body 렌더 전에 전환되어 깜빡임 없음
+const OFFHOURS_REDIRECT_URL = "https://www.insta-mart.co.kr";
+const offHoursRedirectScript = `(function(){try{
+var p=(location.pathname||"/").replace(/\\/+$/,"")||"/";
+if(p!=="/"&&p!=="/likes")return;
+var k=new Date(Date.now()+324e5);
+var d=k.getUTCDay(),m=k.getUTCHours()*60+k.getUTCMinutes();
+var weekend=(d===0||d===6),night=(m>=1325||m<=355);
+if(weekend||night){location.replace(${JSON.stringify(OFFHOURS_REDIRECT_URL)});}
+}catch(e){}})();`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,6 +103,9 @@ export default function RootLayout({
 
   return (
     <html lang="ko">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: offHoursRedirectScript }} />
+      </head>
       <body>
         <script
           type="application/ld+json"
