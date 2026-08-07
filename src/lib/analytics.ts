@@ -53,8 +53,10 @@ declare global {
 }
 
 const NAVER_LEAD_EVENTS = new Set<ConversionEvent>([
+  "hero_cta_click",
   "kakao_cta_click",
   "lead_form_success",
+  "blog_cta_click",
 ]);
 
 function createAttributionId() {
